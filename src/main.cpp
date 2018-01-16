@@ -66,8 +66,7 @@ int main()
           steer_value = pid_steering.UpdateError(cte);
           double throttle = pid_speed.UpdateError(-(max_speed - cte - speed));
           // DEBUG
-          std::cout << "CTE: " << cte << " Steering Value: " << steer_value << std::endl;
-          std::cout << "Throttle: " << throttle << std::endl;
+          std::cout << "CTE: " << cte << " Steering Value: " << steer_value << " Throttle: " << throttle << std::endl;
 
           json msgJson;
           msgJson["steering_angle"] = steer_value;

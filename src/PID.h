@@ -6,9 +6,7 @@ public:
   /*
   * Errors
   */
-//  double p_error_;
   double i_error_;
-//  double d_error_;
 
   /*
   * Coefficients
@@ -39,11 +37,6 @@ public:
   * Update the PID error variables given cross track error.
   */
   double UpdateError(double cte);
-
-  /*
-  * Calculate the total PID error.
-  */
-//  double TotalError();
 };
 
 #endif /* PID_H */

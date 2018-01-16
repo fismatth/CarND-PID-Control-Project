@@ -28,13 +28,8 @@ double PID::UpdateError(double cte) {
 	i_error_ += cte;
 	double d_cte = cte - prev_cte_;
 	prev_cte_ = cte;
-	cout << "d_cte = " << d_cte << endl;
-	cout << "P = " << -Kp_ * cte << endl;
-	cout << "D = " << -Kd_ * d_cte << endl;
-	cout << "I = " << -Ki_ * i_error_ << endl;
+//	cout << "P = " << -Kp_ * cte << endl;
+//	cout << "D = " << -Kd_ * d_cte << endl;
+//	cout << "I = " << -Ki_ * i_error_ << endl;
 	return -Kp_ * cte - Kd_ * d_cte - Ki_ * i_error_;
 }
-
-//double PID::TotalError() {
-//}
-
